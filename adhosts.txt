@@ -1,3 +1,6 @@
-r*---sn-*.googlevideo.com/*
-r*.sn-*.googlevideo.com/*
-~rr*---sn-*.googlevideo.com/*
+|http://r*---sn-*.googlevideo.com*
+|http://r*.sn-*.googlevideo.com*
+~|http://rr*---sn-*.googlevideo.com*
+|https://r*---sn-*.googlevideo.com*
+|https://r*.sn-*.googlevideo.com*
+~|https://rr*---sn-*.googlevideo.com*
