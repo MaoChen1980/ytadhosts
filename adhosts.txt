@@ -14,21 +14,23 @@
 !  支持通配符*和？
 !  -------------------------------------------------------------------------------------------
 
-|http://r*---sn-*.googlevideo.com*
-|http://r*.sn-*.googlevideo.com*
-~|http://rr*---sn-*.googlevideo.com*
-|https://r*---sn-*.googlevideo.com*
-|https://r*.sn-*.googlevideo.com*
-~|https://rr*---sn-*.googlevideo.com*
+/^r[0-9]+-+sn-+[a-z0-9]+-+[a-z0-9]+\.googlevideo\.com$/
+/r[0-9]+\.sn-[0-9]+-[0-9]+\.googlevideo\.com$/
 
+
+!|http://r*---sn-*.googlevideo.com*
+!|http://r*.sn-*.googlevideo.com*
+!~|http://rr*---sn-*.googlevideo.com*
+!|https://r*---sn-*.googlevideo.com*
+!|https://r*.sn-*.googlevideo.com*
+!~|https://rr*---sn-*.googlevideo.com*
 !/r\d+---sn-[a-z0-9]*\.googlevideo\.com/
 !/r\d\d---sn-[a-z0-9]*\.googlevideo\.com/
 !/r\d\.sn-[a-z0-9]*-[a-z0-9]*\.googlevideo\.com/
 !/r\d\d\.sn-[a-z0-9]*-[a-z0-9]*\.googlevideo\.com/
 !/r\d\.sn-[a-z0-9]*\.googlevideo\.com/
 !/r\d\d\.sn-[a-z0-9]*\.googlevideo\.com/
-
-/r\d+---sn-[a-z0-9]+\.googlevideo\.com/
-/r\d+---sn-[a-z0-9]+-[a-z0-9]+\.googlevideo\.com/
-/r\d+\.sn-[a-z0-9]+\.googlevideo\.com/
-/r\d+\.sn-[a-z0-9]+-[a-z0-9]+\.googlevideo\.com/
+!/r\d+---sn-[a-z0-9]+\.googlevideo\.com/
+!/r\d+---sn-[a-z0-9]+-[a-z0-9]+\.googlevideo\.com/
+!/r\d+\.sn-[a-z0-9]+\.googlevideo\.com/
+!/r\d+\.sn-[a-z0-9]+-[a-z0-9]+\.googlevideo\.com/
